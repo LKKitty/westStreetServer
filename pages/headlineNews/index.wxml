@@ -1,0 +1,17 @@
+<!-- pages/headlineNews/index.wxml -->
+<view class="content">
+  <view class="flexbox list " wx:for="{{lists}}" wx:key="index" bind:tap="onDetail" data-id="{{item.Id}} " data-title="{{item.Title}}">
+    <view class="left">
+      <image src="{{item.Img}}" />
+    </view>
+    <view class="flexbox center">
+      <text class="title single-line">{{item.Title?item.Title:''}}</text>
+      <text class="des double-line" style="opacity:{{item.Remark?1:0}}">{{item.Remark === null?'空数据空数据空数据空数据空数据空数据空数据空数据空数据':item.Remark}}</text>
+    </view>
+    <view class="right">
+      {{item.AddTime}}
+    </view>
+  </view>
+  <!-- noData -->
+    <text class="noData" wx:if="{{lists.length === 0}}">{{noDatatext}}</text>
+</view>

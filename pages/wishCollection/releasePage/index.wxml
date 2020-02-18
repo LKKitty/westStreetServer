@@ -1,0 +1,72 @@
+<!-- pages/wishCollection/releasePage/index.wxml -->
+<view class="container">
+  <!-- banner -->
+  <view class="header"></view>
+  <!-- content -->
+  <view class="form-box">
+    <view class="content">
+      <form report-submit="false" bindsubmit="formSubmit" bindreset="">
+        <view class="item">
+          <text class="tip">姓名*</text>
+          <input name="name" class="input" focus="{{true}}" maxlength="10"/>
+        </view>
+        <view class="item">
+          <text class="tip">电话*</text>
+          <input type="number" name="tel" bindinput="inputChange" bindinput="inputChange" class="input"  maxlength="11"/>
+        </view>
+        <view class="item">
+          <text class="tip">来源*</text>
+          <view class="re-input">
+            <picker bindchange="bindPickerChange" value="{{originIndex}}" range="{{form.origin}}">
+              <view  class="picker">{{originIndex ? form.origin[originIndex] : form.origin[0] }}
+              <image class="triangle" src="/pages/personalCenter/images/triangle.png" />
+              </view>
+            </picker>
+            <!-- <input type="text" placeholder="请选择类型" value="{{cate}}" /> -->
+          </view>
+        </view>
+        <view class="item">
+          <text class="tip">身份证号*</text>
+          <input name="idcard" bindinput="inputChange" type="idcard" class="input" maxlength="18"/>
+        </view>
+        <view class="item">
+          <text class="tip">心愿内容*</text>
+          <input name="info" class="input" placeholder="(10个字以内)" placeholder-class="placeholder" maxlength="10" />
+        </view>
+        <view class="item">
+          <text class="tip">心愿数量*</text>
+          <view class="flex-box count-box">
+            <input name="count" class="input" type="number" placeholder="" value="{{form.count}}" placeholder-class="placeholder" bindinput="keyInput" />
+          <view class="flex-box arrow-box">
+            <image src="./images/arrow-up.png" class="up" data-arrow="up" bindtap="countTap"/>
+            <image class="down" src="./images/arrow-down.png" data-arrow="down" bindtap="countTap"/>
+          </view>
+          </view>
+        </view>
+        <view class="item">
+          <text class="tip">心愿说明*</text>
+          <textarea class="reason" wx:if="{{form.showReason}}" name="reason" placeholder="请简述发布此心愿缘由" placeholder-class="placeholder" bindinput="inputReason" maxlength="500" value="{{form.reason}}"></textarea>
+          <view class="reason" wx:if="{{!form.showReason}}" >{{form.reason}}</view>
+        </view>
+        <view class="item">
+          <text class="tip">上传图片*</text>
+          <view class="up-box">
+            <view class="up-img" wx:for="{{form.imgs}}" wx:key="index" bind:tap="previewImage" data-index="{{index}}" wx:if="{{form.imgs.length != 0}}">
+              <image src="{{item}}" />
+              <image src="./images/close.png" class="close" catch:tap="deleteImg" data-index="{{index}}" />
+            </view>
+            <view class="up-img up-add" bindtap="chooseImg">
+              <image src="./images/add.png" />
+            </view>
+          </view>
+        </view>
+        <!-- 按钮 -->
+        <button formType="submit" class="submit">
+          <text>发布申请</text>
+        </button>
+      </form>
+    </view>
+  </view>
+  <!-- tip -->
+  <tip-cmp bindtip="onTip" tip="{{tips}}" wx:if="{{isTip}}"></tip-cmp>
+</view>

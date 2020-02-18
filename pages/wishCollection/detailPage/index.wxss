@@ -1,0 +1,170 @@
+/* pages/activitySign/detail/index.wxss */
+
+.container .header {
+  height: 280rpx;
+}
+.content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 18rpx;
+  box-sizing: border-box;
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column; */
+  overflow: hidden;
+}
+.wish-content{
+  width: 100%;
+  height: 70%;
+  margin-top: 50rpx;
+  overflow: auto;
+  box-sizing: border-box;
+  padding-right: 20rpx;
+}
+.content .tab {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 26rpx 30rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 18rpx 24rpx 0rpx rgba(241, 241, 241, 0.44);
+  border-radius: 10rpx;
+  margin-top: 32rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.content .tab .title {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(48, 48, 48, 1);
+}
+.content .tab .triangle {
+  align-self: flex-end;
+  margin-top: 30rpx;
+}
+.content .tab .triangle text {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(250, 95, 96, 1);
+}
+.content .tab .triangle image {
+  width: 20rpx;
+  height: 10rpx;
+  margin-left: 10rpx;
+}
+.content .one {
+  background: linear-gradient(
+    90deg,
+    rgba(237, 55, 59, 1),
+    rgba(255, 110, 110, 1)
+  );
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.content .one .left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.content .one .left .title {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+.content .one .left .text {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+.content .one image {
+  width: 120rpx;
+  height: 120rpx;
+  background: rgba(237, 237, 237, 1);
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+.content .center {
+  width: 100%;
+  height: 180rpx;
+  overflow: hidden;
+}
+.content .wish-center{
+  height: 60rpx !important;
+}
+.content .center_active {
+  overflow: auto;
+  height: auto;
+  transition: 2s;
+}
+.content .des{
+  padding: 10rpx 0;
+  overflow: auto;
+  height: auto;
+}
+.content .two .center text {
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(186, 186, 186, 1);
+  line-height: 36rpx;
+}
+.content .three .center image {
+  width: 632rpx;
+  /* height: 181rpx; */
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+}
+.four-bottom{
+  margin-bottom:60rpx;
+}
+.content .four .center {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 10rpx 0;
+}
+.content .four .center text {
+  flex:1;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(186, 186, 186, 1);
+  line-height: 36rpx;
+}
+.content .four .center image {
+  width: 10rpx;
+  height: 20rpx;
+}
+.content .submit {
+  margin: auto;
+  margin-top: 133rpx;
+  margin-bottom: 110rpx;
+  width: 543rpx;
+  /* padding: 30rpx 0; */
+  background: linear-gradient(-90deg,  rgba(253, 103, 104, 1) 0%,    rgba(240, 64, 68, 1) 100%  );
+  box-shadow: 0rpx 16rpx 21rpx 0rpx rgba(255, 42, 42, 0.26);
+  border-radius: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit text {
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+

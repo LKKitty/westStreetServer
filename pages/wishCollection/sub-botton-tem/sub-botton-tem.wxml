@@ -1,0 +1,5 @@
+<template name="subBottom">
+  <view class="submit">
+    <text>{{text}}</text>
+  </view>
+</template>

@@ -1,0 +1,208 @@
+/**index.wxss**/
+.container .content {
+  width: 100%;
+  padding: 0 19rpx;
+  box-sizing: border-box;
+}
+.container .header {
+  position: relative;
+  width: 100%;
+  height: 295rpx;
+  background: #FF5055;
+}
+.container .header .banner {
+  width: 750rpx;
+  height: 295rpx;
+}
+/* 标题 */
+.container .content .tab-title {
+  display: block;
+  padding: 30rpx 0;
+  box-sizing: border-box;
+  font-size:30rpx;
+  font-family:PingFang SC;
+  font-weight:bold;
+  color:rgba(48,48,48,1);
+  line-height:42rpx;
+  overflow: hiddle;
+}
+
+/*  智慧化党建平台 */
+.container .content .operatBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .content .operatBox image {
+  width: 225rpx;
+  height: 184rpx;
+}
+/* 西区头条 */
+.container .content .headlineBox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height:145rpx;
+  padding: 0 30rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0rpx 18rpx 24rpx 0rpx rgba(225,225,225,0.3);
+  border-radius:10rpx;
+}
+.container .content .headlineBox image {
+  width: 58rpx;
+  height: 67rpx;
+}
+.container .content .headlineBox .headRight{
+  flex:1;
+  height: 67rpx;
+  margin-left: 30rpx;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.container .content .headlineBox .headRight .line {
+  height: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size:22rpx;
+  color:#9C9C9C;
+  text-align: left;
+  margin-top: 16rpx;
+}
+.container .content .headlineBox .headRight .line:first-child{
+  color:#FF3C3C;
+  margin-top: 0rpx;
+}
+.container .content .headlineBox .headRight .line .headTitle {
+  flex: 1;
+  margin-left:10rpx;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+.container .content .headlineBox .headRight .line .headIcon {
+  width:60rpx;
+  /* height:30rpx; */
+  border:1rpx solid currentColor;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .container .content .headlineBox .headRight .line .headIcon text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* 精彩活动一览 */
+.container .content .activityBox {
+  width: 100%;
+}
+.container .content .activityBox .oneImg {
+  position: relative;
+  box-shadow:0rpx 18rpx 24rpx 0rpx rgba(225,225,225,0.3);
+}
+.container .content .activityBox .oneImg image{
+  width:100%;
+  height:242rpx;
+  border-radius:10rpx;
+}
+.container .content .activityBox .oneImg .act-text{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height:48rpx;
+  background:linear-gradient(0deg,rgba(3,0,0,1) 0%,rgba(45,45,45,0.01) 100%);
+  border-radius:10rpx;
+  overflow: hidden;
+}
+.container .content .activityBox .oneImg text {
+  width: 80%;
+  margin-left: 42rpx;
+  margin-bottom: 16rpx;
+  font-size:26rpx;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+} 
+.container .content .activityBox .twoImg{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.container .content .activityBox .twoImg .oneImg {
+  width:346rpx;
+  height:242rpx;
+  border-radius:10rpx;
+}
+.container .content .activityBox .twoImg .onlyOne{
+  width: 100%
+}
+.container .content .activityBox .twoImg .oneImg image{
+  width: 100%;
+}
+
+/* bottom */
+.container .content .bottomBox {
+  width:100%;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 18rpx 24rpx 0rpx rgba(225,225,225,0.3);
+  border-radius:10rpx;
+  padding:  0 47rpx;
+  box-sizing: border-box;
+}
+.container .content .bottomBox view {
+  padding:  49rpx 0 ;
+  border-bottom: 1rpx solid rgba(238,238,238,0.3);
+  font-size:28rpx;
+  font-weight:500;
+  color:#8B8B8B;
+  line-height:42rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .content .bottomBox view text:first-child{
+  color:#3C3C3C;
+}
+.text-label{
+  width: 140rpx;
+  text-align: left;
+}
+.container .content .bottomBox view text:nth-child(2){
+  flex: 1;
+  align-self: flex-start;
+}
+
+.container .content .bottomBox view .text {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  border:none;
+  padding:0;
+}
+.container .content .bottomBox view .text  text{
+   color:#8B8B8B;
+}
+.logo{
+  width: 300rpx;
+  height: 72rpx;
+  margin-left: 25%;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}

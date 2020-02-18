@@ -1,0 +1,70 @@
+/* pages/calendar/calendar.wxss */
+
+.flexBox {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendar-wrapper {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.calendar-wrapper .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: rgba(48, 48, 48, 1);
+  text-align: center;
+  margin-bottom: 20rpx;
+  justify-content: center;
+}
+.calendar-wrapper .title .tapBtn {
+  width: 9rpx;
+  height: 18rpx;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 30rpx;
+  margin: 0 50rpx;
+  border: 20rpx solid rgba(48, 48, 48, 0);
+}
+.calendar-wrapper .weeks {
+  width: 100%;
+  margin-top: 30rpx;
+}
+.calendar-wrapper .weeks .weekItem {
+  flex: 1;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+}
+.calendar-wrapper .days {
+  width: 100%;
+  margin-top: 10rpx;
+}
+.calendar-wrapper .days .dayItem {
+  position: relative;
+  width: 72rpx;
+  height: 71rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+  justify-content:center;
+  color: #F1F1F1;
+}
+.calendar-wrapper .days .dayItem .itemBg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72rpx;
+  height: 71rpx;
+}
+.calendar-wrapper .days .active{
+  color: black;
+}
+.calendar-wrapper .days .today {
+  color:#FF5055;
+  font-size: 26rpx;
+}

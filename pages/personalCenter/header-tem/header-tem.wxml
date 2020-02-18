@@ -1,0 +1,16 @@
+<template name="header">
+  <view class="header" name="header">
+    <image src="/images/banner.png" class="banner"></image>
+    <view class="avatarBox">
+      <view class="avatar" wx:if="{{openid}}">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <image wx:if="{{!openid}}" class="avatar" src="/pages/personalCenter/images/avatar_defalt.png" />
+      <view class="text" wx:if="{{openid}}">
+        <open-data type="userNickName"></open-data>
+      </view>
+      <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" wx:if="{{!openid}}">点击登录/注册</button>
+      <image class="arrow" src="/pages/personalCenter/images/right_arrow.png" wx:if="{{!openid}}"></image>
+    </view>
+  </view>
+</template>

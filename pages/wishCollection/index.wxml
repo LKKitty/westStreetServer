@@ -1,0 +1,31 @@
+<!-- pages/wishCollection/index.wxml -->
+<view class="container">
+  <!-- header -->
+  <view class="header">
+    <text>{{description}}</text>
+  </view>
+  <!-- add -->
+  <image class="add" bind:tap="addWish" src="./images/add.png" />
+  <!-- list -->
+  <view class="content">
+    <view class="list"  wx:for="{{wishLists}}" wx:key="index" >
+      <view class="list-header">
+        <image src="./images/icon.png" />
+        <text>心愿项目</text>
+      </view>
+      <image class="adum-img" src="{{item.Imgs[0]}}" />
+      <view class="list-item">
+        <text>标题：</text>
+        <text class="text single-line">{{item.Content}}</text>
+      </view>
+      <view class="list-item list-bottom">
+        <text class="jichu">基础详情：</text>
+        <text class="text double-line">{{item.Infos?item.Infos:''}}</text>
+        <view class="list-button" bind:tap="wishDetail" data-id="{{item.Id}}" data-type="1" data-title="{{item.Content}} ">
+          <text>了解项目</text>
+        </view>
+      </view>
+    </view>
+    <text class="noData" wx:if="{{wishLists.length ===0}}">{{noDatatext}}</text>
+  </view>
+</view>

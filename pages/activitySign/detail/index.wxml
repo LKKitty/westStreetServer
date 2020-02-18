@@ -1,0 +1,71 @@
+<!-- pages/activitySign/detail/index.wxml -->
+<view class="container">
+  <!-- banner -->
+  <view class="header"></view>
+  <!-- content -->
+  <view class="content">
+    <!-- swiper -->
+    <banner-cmp imgUrls="{{imgUrls}}"></banner-cmp>
+    <!-- tab-box -->
+    <nav-cmp navNames="{{navNames}}" bindnav="navTap"></nav-cmp>
+    <!-- tab-content -->
+    <view class="tab-content">
+      <!-- 活动详情 -->
+      <view class="list">
+        <view class="tab-item one" wx:if="{{indexId === 0}}">
+          <view class="item">
+            <text class="lable">活动日期：</text>
+            <text class="item-text">{{SDate}}</text>
+          </view>
+          <view class="item">
+            <text class="lable">活动时间：</text>
+            <text class="item-text">{{STime}}-{{ETime}}</text>
+          </view>
+          <view class="item">
+            <text class="lable">主办单位：</text>
+            <text class="item-text">{{unit === null?'': unit}}</text>
+          </view>
+          <view class="item noBorder">
+            <text class="lable">活动地址：</text>
+            <text class="item-text">{{addr === null?'': addr}}</text>
+            <!-- <image class="icon2" src="./images/icon2.png" /> -->
+          </view>
+        </view>
+        <view class="tab-item two" wx:if="{{indexId === 1}}">
+          <!-- <view class="head">
+            <image src="./images/daohang.png" />
+            <text>导航地址</text>
+          </view> -->
+          <view class="map">
+            <map id="map" wx:if="{{isMap}}" longitude="{{longitude}}" latitude="{{latitude}}" scale="14"  enable-scroll="{{false}}" enable-rotate="{{false}}" markers="{{markers}}" bindmarkertap="markertap" bindtap="clickMap" show-location style="width: 100%; height: 100%;"></map>
+          </view>
+          <view class="item" >
+            <text class="lable">打卡时间段：</text>
+            <text>{{pointSTime}}-{{pointETime}}</text>
+          </view>
+          <view class="item noBorder" >
+            <text class="lable">学时时长：</text>
+            <text>{{learnTime?learnTime:'0'}}小时</text>
+          </view>
+        </view>
+      </view>
+      <!-- 活动须知 -->
+      <view class="tab-item act_item" wx:if="{{indexId === 2}}">
+        <!-- <view class="head">
+          <image src="/pages/reservationService/detailPage/images/notice.png" />
+          <text>活动须知</text>
+        </view> -->
+        <view class="item">
+          <!-- <text class="lable">活动时间：</text> -->
+          <text>{{noite?noite:''}}</text>
+        </view>
+      </view>
+      <view class="submit" bind:tap="mySubmit" wx:if="{{StatusText !== '隐藏'}}" style="opacity:{{bottonStatus[bottonStatusIndex]}}">
+      <text>{{StatusText}}</text>
+    </view>
+    </view>
+    
+  </view>
+  <!-- tip -->
+  <tip-cmp bindtip="onTip" tip="{{tips}}" wx:if="{{isTip}}"></tip-cmp>
+</view>

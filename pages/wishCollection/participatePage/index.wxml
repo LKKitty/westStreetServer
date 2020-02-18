@@ -1,0 +1,47 @@
+<!-- pages/wishCollection/releasePage/index.wxml -->
+<view class="container">
+  <!-- banner -->
+  <view class="header"></view>
+  <!-- content -->
+  <view class="form-box">
+    <view class="content">
+      <form report-submit="false" bindsubmit="formSubmit" bindreset="">
+        <view class="item">
+          <text class="tip">姓名*</text>
+          <input name="name" class="input" maxlength="10" focus="{{true}}"/>
+        </view>
+        <view class="item">
+          <text class="tip">电话*</text>
+          <input name="tel" type="number" bindinput="inputChange"  class="input" maxlength="11"/>
+        </view>
+        <view class="item ">
+          <text class="tip">来源*</text>
+          <!-- <input name="origin" class="input" placeholder="(单位、团体、社会组织、个人)" placeholder-class="placeholder" /> -->
+          <view class="re-input">
+            <picker bindchange="bindPickerChange" value="{{originIndex}}" range="{{form.origin}}">
+              <view  class="picker">{{originIndex ? form.origin[originIndex] : form.origin[0] }}
+              <image class="triangle" src="/pages/personalCenter/images/triangle.png" />
+              </view>
+            </picker>
+            <!-- <input type="text" placeholder="请选择类型" value="{{cate}}" /> -->
+          </view>
+        </view>
+        <view class="item">
+          <text class="tip">身份证号*</text>
+          <input maxlength="18" type="idcard" bindinput="inputChange"  name="idcard" class="input" />
+        </view>
+        <view class="item">
+          <text class="tip">申请理由*</text>
+          <textarea name="reason" placeholder="(申请理由不小于50字)"  placeholder-class="placeholder" class="reason" wx:if="{{form.showReason}}"
+          maxlength="100" value="{{form.reason}}" bindinput="inputReason" ></textarea>
+           <view class="reason" wx:if="{{!form.showReason}}" >{{form.reason}}</view>
+        </view>
+        <!-- 按钮 -->
+        <button formType="submit" class="submit"><text>参与心愿</text>
+          </button>
+      </form>
+    </view>
+  </view>
+  <!-- tip -->
+  <tip-cmp bindtip="onTip" tip="{{tips}}" wx:if="{{isTip}}"></tip-cmp>
+</view>

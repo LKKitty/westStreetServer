@@ -1,0 +1,37 @@
+/* components/nav/index.wxss */
+.tab-nav {
+  width: 703rpx;
+  height: 120rpx;
+  border-radius: 10rpx 10rpx 0 0;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 18rpx 24rpx 0rpx rgba(241, 241, 241, 0.44);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tab-nav .nav {
+  position: relative;
+  height: 120rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(139, 139, 139, 1);
+  line-height: 120rpx;
+}
+.tab-nav .nav text {
+  position: relative;
+}
+.tab-nav .active text {
+  color: #fa5f60;
+}
+.tab-nav .active::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 50rpx;
+  height: 4rpx;
+  background: #fa5f60;
+}

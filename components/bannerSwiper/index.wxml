@@ -1,0 +1,8 @@
+<!-- components/bannerSwiper/index.wxml -->
+<swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#ffffff" autoplay="{{true}}" interval="{{3000}}">
+  <block wx:for="{{imgs}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>

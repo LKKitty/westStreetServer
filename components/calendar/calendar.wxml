@@ -1,0 +1,20 @@
+<!-- pages/calendar/calendar.wxml -->
+<view class="calendar-wrapper">
+  <!-- title -->
+  <view class="title flexBox">
+    <image class="tapBtn" bindtap="changeWeek" data-offset="-7" src="./images/left_arrow.png" />
+    {{ currentDateText }}
+    <image class="tapBtn" bindtap="changeWeek" data-offset="7" src="./images/right_arrow.png" />
+  </view>
+  <!-- 星期 -->
+  <view class="weeks flexBox">
+    <view class="weekItem" wx:for="{{ weeks }}" wx:key="{{ item }}">{{ item }}</view>
+  </view>
+  <!-- 天数 -->
+  <view class="days flexBox">
+    <view class="dayItem flexBox  {{item.today === 0  ? 'today' : ''}} {{item.today === 1  ? 'active' : ''}}" wx:for="{{ currentDayOfWeek }}" wx:key="{{ item }}" data-index="{{ index }}" data-num="{{ item.num }}" bindtap="dayTap">
+      <image class="itemBg" src="./images/itembg.png" wx:if="{{item.selected}}" />
+      <text>{{item.today === 0?'今天':item.num}}</text>
+    </view>
+  </view>
+</view>

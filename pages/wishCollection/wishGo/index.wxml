@@ -1,0 +1,25 @@
+<!-- pages/wishCollection/wishGo/index.wxml -->
+<view class="container">
+  <!-- 背景图 -->
+  <image class="bg" src="./images/bg.png" />
+  <!-- 内容区 -->
+  <view class="content">
+    <!-- 背景图 -->
+    <image class="contentBg" src="./images/contentBg.png" />
+    <view class="lists">
+      <view class="list" wx:for="{{goData}}" wx:key="index">
+        <view class="left">
+          <!-- <image class="line1" src="./images/line.png" /> -->
+          <image class="dot {{item.IsGo === 1 ?'dot_active':''}}" src="{{item.IsGo === 1 ? './images/dot_active.png' :'./images/dot.png'}}" />
+          <image wx:if="{{index !== goData.length-1}}" class="line" src="./images/line.png" />
+        </view>
+        <view class="right">
+          <view class="dot_text"></view>
+          <text>{{item.Remark}}</text>
+        </view>
+      </view>
+      <text class="noData" wx:if="{{goData.length ===0}}">暂时没有去向~</text>
+        
+    </view>
+  </view>
+</view>

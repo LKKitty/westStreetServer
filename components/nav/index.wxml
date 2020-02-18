@@ -1,0 +1,7 @@
+<!--components/nav/index.wxml-->
+<!-- tab-box -->
+<view class="tab-nav">
+  <view class="nav {{indexId=== index ? 'active' : ''}}" wx:for="{{navNames}}" wx:key="index" bindtap="navTap" data-index="{{index}}">
+    <text>{{item}}</text>
+  </view>
+</view>

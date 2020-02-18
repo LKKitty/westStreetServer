@@ -1,0 +1,4 @@
+{
+  "usingComponents": {"list-cmp":"/components/list/index","tip-cmp":"/components/tipMask/index"},
+  "navigationBarTitleText": "活动报名"
+}

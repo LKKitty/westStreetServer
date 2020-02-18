@@ -1,0 +1,272 @@
+/* pages/reservationService/detailPage/index.wxss */
+/* pages/activitySign/detail/index.wxss */
+.container .header {
+  height: 280rpx;
+}
+.content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0 23rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.content .tab-content {
+  width: 703rpx;
+  height: 550rpx;
+  flex: 1;
+  overflow: auto;
+  border-top: 1rpx solid #f3f6f7;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.tab-content .tab-item {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx 42rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 18rpx 24rpx 0rpx rgba(241, 241, 241, 0.44);
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+.act_item{
+  margin-bottom: 330rpx;
+}
+.tab-content .one {
+  border-radius: 0 0 10rpx 10rpx;
+}
+.tab-content .tab-item .item {
+  padding: 45rpx 0;
+  border-bottom: 1rpx solid #f3f6f7;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.tab-content .tab-item .noBorder {
+  border: 0;
+}
+.tab-content .tab-item .item text {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #8b8b8b;
+}
+.tab-content .tab-item .item text:last-child {
+  flex: 1;
+}
+.tab-content .tab-item .item .lable {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #3c3c3c;
+}
+.tab-content .tab-item .head {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-bottom: 1rpx solid #f3f6f7;
+  padding-bottom: 23rpx;
+}
+.tab-content .tab-item .head image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.tab-content .tab-item .head text {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(48, 48, 48, 1);
+  margin-left: 10rpx;
+}
+.tab-content .tab-item .text {
+  width: 617rpx;
+  /* height: 239rpx; */
+  border-radius: 10rpx;
+  margin: 32rpx 0;
+}
+.tab-content .tab-item .text text {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(139, 139, 139, 1);
+  line-height: 40rpx;
+}
+.content .submit {
+  margin-bottom: 60rpx;
+  padding: 20rpx 0;
+}
+
+/* 蒙层 */
+.mask-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.mask-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mask-content .date-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 750rpx;
+  box-sizing: border-box;
+  padding: 50rpx 56rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 20rpx 20rpx 0rpx 0rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.mask-content .date-box .date-list  {
+  width: 100%;
+}
+.mask-content .date-box .date-list .date-title {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(48, 48, 48, 1);
+}
+.mask-content .date-box .date-list .date-items {
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.mask-content .date-box .date-list .date-item-active {
+  background: rgba(255, 238, 238, 1);
+  border: 1rpx solid rgba(255, 75, 79, 1);
+}
+.mask-content .date-box .date-list .date-item {
+  height: 100rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10rpx 15rpx;
+  margin:10rpx 6rpx;
+}
+.mask-content .date-box .date-list .date-item text {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(253, 100, 102, 1);
+}
+/* .mask-content .date-box .date-list .date-select-box{
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+} */
+.mask-content .date-box .date-list .date-item-time{
+  height: 100rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10rpx 15rpx;
+  margin:10rpx 6rpx;
+}
+.select-time{
+  width: 200rpx;
+}
+.mask-content .date-box .date-list .picker{
+  width: 160rpx;
+  height: 100rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(253, 100, 102, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mask-box .submit{
+  margin-top: 10rpx;
+}
+/* 弹出或关闭动画来动态设置内容高度 */
+
+@keyframes slideBGtUp {
+  from {
+    background: transparent;
+  }
+
+  to {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes slideBGDown {
+  from {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  to {
+    background: transparent;
+  }
+}
+/* 显示或关闭内容时动画 */
+
+.openBG {
+  animation: slideBGtUp 0.5s ease-in both;
+  /* animation-fill-mode: both 动画将会执行 forwards 和 backwards 执行的动作。 */
+}
+.closeBG {
+  animation: slideBGDown 0.5s ease-in both;
+  /*animation-fill-mode: both 动画将会执行 forwards 和 backwards 执行的动作。 */
+}
+/* 弹出或关闭动画来动态设置内容高度 */
+
+@keyframes slideContentUp {
+  from {
+    transform: translateY(100%); /*设置为正数则底部弹出来，负数则相反*/
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideContentDown {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+/* 显示或关闭内容时动画 */
+
+.open {
+  animation: slideContentUp 0.5s ease-in both;
+}
+
+.close {
+  animation: slideContentDown 0.5s ease-in both;
+  -webkit-animation: slideContentDown 0.5s ease-in both;
+}

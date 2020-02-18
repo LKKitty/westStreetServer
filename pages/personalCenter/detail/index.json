@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "item-cmp":"/components/item/index",
+    "list-cmp":"/components/list/index",
+    "tip-cmp":"/components/tipMask/index",
+    "nav-cmp":"/components/nav/index"
+  }
+}

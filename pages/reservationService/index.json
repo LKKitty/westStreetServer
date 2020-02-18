@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "calender-cmp":"/components/calendar/calendar",
+    "list-cmp":"/components/list/index",
+    "nav-cmp":"/components/nav/index"
+  },
+  "navigationBarTitleText":"预约服务"
+}

@@ -1,0 +1,89 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- banner -->
+  <view class="header">
+    <image src="/images/bannerIndex.png" class="banner"></image>
+  </view>
+  <view class="content">
+    <!-- 党建化党建平台 -->
+    <text class="tab-title">智慧化党建平台</text>
+    <view class="operatBox">
+      <image src="./images/icon1.png" data-url="../reservationService/index" bindtap="bindViewTap"></image>
+      <image src="./images/icon2.png" data-url="../wishCollection/index" bindtap="bindViewTap"></image>
+      <image src="./images/icon3.png" data-url="../activitySign/index" bindtap="bindViewTap"></image>
+    </view>
+    <!-- 西区头条 -->
+    <view class="headlineBox">
+      <image src="./images/icon4.png"></image>
+      <view class="headRight">
+        <view class="line" bind:tap="newslist" wx:if="{{newList[0]}}" >
+          <view class="headIcon">
+            <text>热点</text>
+          </view>
+          <text class="headTitle">{{newList[0].Title}}</text>
+        </view>
+        <view class="line" bind:tap="newslist" wx:if="{{newList[1]}}">
+          <view class="headIcon">
+            <text>围观</text>
+          </view>
+          <text class="headTitle">{{newList[1].Title}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 精彩活动一览 -->
+    <view class="activityBox">
+      <text class="tab-title">精彩活动一览</text>
+      <view class="oneImg" wx:if="{{activity[0]}}" bind:tap="activityDetail" data-id="{{activity[0].Id}}"  data-title ="{{activity[0].Name}}">
+        <image src="{{activity[0].Imgs}}"></image>
+        <view class="act-text" >
+          <text>{{activity[0].Name}}</text>
+        </view>
+      </view>
+      <view class="twoImg">
+        <view class="oneImg {{activity[2]?'':'onlyOne'}}" wx:if="{{activity[1]}}" bind:tap="activityDetail" data-id="{{activity[1].Id}}" data-title ="{{activity[1].Name}}">
+          <image src="{{activity[1].Imgs}}"></image>
+        <view class="act-text" >
+          <text>{{activity[1].Name}}</text>
+        </view>
+        </view>
+        <view class="oneImg" wx:if="{{activity[2]}}" bind:tap="activityDetail" data-id="{{activity[2].Id}}" data-title ="{{activity[2].Name}}">
+        <image src="{{activity[2].Imgs}}"></image>
+        <view class="act-text" >
+          <text>{{activity[2].Name}}</text>
+        </view>
+        </view>
+      </view>
+    </view>
+    <!-- bottom -->
+    <view class="bottomBox">
+      <view>
+        <text class="text-label">版权所有：</text>
+        <text>中共惠州大亚湾经济开发区西区街道工作委员会</text>
+      </view>
+      <view>
+        <text class="text-label" space="emsp">地  址：</text>
+        <text>惠州大亚湾经济技术开发区西区街道龙海二路16号</text>
+      </view>
+      <view>
+        <text class="text-label" space="emsp">编  码：</text>
+        <text>516083</text>
+      </view>
+      <view>
+        <text>办公时间(工作日)：</text>
+        <view class="text"> 
+           <text space="emsp">上午08:30-12:00</text>
+          <text>下午14:00-17:30</text></view>
+      </view>
+      <view>
+        <text>党政办联系电话：</text>
+        <text>0752—5102661</text>
+      </view>
+      <view>
+        <text>组织办联系电话：</text>
+        <text>0752—5103811</text>
+      </view>
+    </view>
+    <!-- logo -->
+    <image class="logo" src="/images/logo.png"></image>
+  </view>
+</view>

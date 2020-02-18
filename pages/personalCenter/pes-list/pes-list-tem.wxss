@@ -1,0 +1,68 @@
+/* 登录后列表 */
+.content .list {
+  height: 319rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 18rpx 24rpx 0rpx rgba(225, 225, 225, 0.3);
+  border-radius: 10rpx;
+  padding: 0 44rpx;
+  margin-bottom: 26rpx;
+}
+.content .list .list-head {
+  height: 103rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: solid 1rpx #F3F6F7
+}
+.content .list .list-head .icon {
+  width: 41rpx;
+  height: 41rpx;
+}
+.content .list .list-head text {
+  flex: 1;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgba(48, 48, 48, 1);
+  margin-left: 10rpx;
+}
+.content .list .list-head .arrow-gray {
+  width: 13rpx;
+  height: 24rpx;
+}
+.content .list .list-content {
+  height: 215rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.content .list .list-content image {
+  width: 185rpx;
+  height: 149rpx;
+  border-radius: 10rpx;
+  object-fit: cover;
+}
+.content .list .list-content .list-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 120rpx;
+  margin-left: 20rpx;
+  overflow: hidden;
+}
+.content .list .list-content .list-right .list-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: rgba(35, 24, 21, 1);
+  text-align: left;
+}
+.content .list .list-content .list-right .list-text {
+  height: 86rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(139, 139, 139, 1);
+  line-height: 1.5;
+  margin-top: 16rpx;
+}

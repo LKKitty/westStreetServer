@@ -1,0 +1,72 @@
+<!-- pages/personalCenter/index.wxml -->
+<import src="./pes-list/pes-list-tem" />
+<import src="./header-tem/header-tem" />
+<view class="container">
+  <!-- banner -->
+  <template is="header" data="{{isRegister,openid}}" />
+  <!-- content -->
+  <view class="content">
+    <!-- 没有登录 -->
+      <view wx:if="{{!isRegister}}" class="lnoData">
+      <image src="./images/noData.png" />
+      <text>你还没有登录注册呦！</text>
+    </view>
+    <!-- 登录后 -->
+    <!-- 预约/活动/签到 -->
+    <block wx:if="{{isRegister}}" wx:for="{{lists}}" wx:key="index" wx:for-item="list">
+      <template is="pesList" data="{{list,index}}" />
+    </block>
+  </view>
+  <!-- 注册 -->
+  <view class="register-content" wx:if="{{showRegisterMaster}}">
+    <view class="register">
+      <view class="re-header">
+        <image src="./images/adorm.png" />
+        <text>注册</text>
+        <image src="./images/adorm.png" />
+      </view>
+      <view class="re-form" >
+        <form report-submit="false" bindsubmit="formSubmit" bindreset="">
+          <view class="re-input">
+            <image src="./images/name.png" />
+            <input type="text" auto-focus maxlength="10" placeholder="请输入姓名" name="Name" value="{{form.Name}}"/>
+          </view>
+          <view class="re-input">
+            <image src="./images/phone.png" />
+            <input name="Phone" type="number" placeholder="请输入手机号码" maxlength="11"
+            bindinput="inputChange"
+            />
+            <view class="send-code" bind:tap="sendCode">
+              <text class="">{{form.codeText}}</text>
+            </view>
+          </view>
+          <view class="re-input">
+            <image src="./images/code.png" />
+            <input name="Code" type="number" maxlength="6" placeholder="请输入验证码" 
+            bindinput="inputChange"
+            />
+          </view>
+          <view class="re-input">
+            <picker name="Type" bindchange="bindPickerChange" value="{{cateIndex}}" range="{{form.category}}">
+              <view  class="picker">{{cateIndex ? form.category[cateIndex] : form.category[0] }}
+              <image class="triangle" src="./images/triangle.png" />
+              </view>
+            </picker>
+            <!-- <input type="text" placeholder="请选择类型" value="{{cate}}" /> -->
+          </view>
+          <view class="re-input">
+            <input name="ComName" type="text" class="com" placeholder="所在公司名称" maxlength="50" />
+          </view>
+          <!-- 提交 -->
+          <button formType="submit" class="submit-box">注册</button>
+          <!-- <view class="submit-box" bind:tap="submit">
+            <text class="">注册</text>
+          </view> -->
+        </form>
+      </view>
+    </view>
+    <image class="close-register" src="./images/close.png" bindtap="closeRegister" />
+  </view>
+  <!-- 登录提示 -->
+  <tip-cmp bindtip="onTip" tip="{{tips}}" wx:if="{{isTip}}"></tip-cmp>
+</view>

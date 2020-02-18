@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "calen-cmp":"/components/calendar/calendar",
+    "banner-cmp":"/components/bannerSwiper/index",
+    "nav-cmp":"/components/nav/index",
+    "tip-cmp":"/components/tipMask/index"
+  },
+  "navigationBarTitleText":"服务详情页"
+}

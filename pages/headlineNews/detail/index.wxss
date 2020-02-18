@@ -1,0 +1,17 @@
+/* pages/headlineNews/detail/index.wxss */
+@import "/wxParse/wxParse.wxss";
+.content{
+  padding: 30rpx;
+  overflow: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.content image{
+  width: 100% !important; 
+}
+rich-text{
+  width: 100%;
+}
+.article{
+  width: 100% !important;
+}

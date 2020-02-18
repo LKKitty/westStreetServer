@@ -1,0 +1,19 @@
+<!-- 分类列表 -->
+<import src="../header-tem/header-tem" />
+<view class="container">
+  <view class="header">
+    <image src="/images/banner.png" class="banner"></image>
+  </view>
+  <!-- detail-active-content 我的签到 -->
+  <!-- nav组件 -->
+    <nav-cmp class="wish-nav" navNames="{{navNames}}" bindnav="navTap" wx:if="{{type ==='wish'}}"></nav-cmp>
+  <view class=" detail-content {{type ==='wish'?'detail-content-wish' : ''}}">
+    <!-- item组件 -->
+    <!-- <item-cmp binditem="itemTap" bindcanel="canelTap" wx:for="{{lists}}" wx:key="index" item="{{item}}" type="{{type}}"></item-cmp> -->
+    <list-cmp binditem="itemTap" bindoperat="operatTap" wx:key="index" wx:for="{{lists}}" type="{{type}}" wishType="{{wishType}}" isFrom="0" item="{{item}}"></list-cmp>
+    <!-- noData -->
+    <text class="noData" wx:if="{{lists.length === 0}}">{{noDataText}}</text>
+  </view>
+  <!-- tip 弹窗提示 -->
+  <tip-cmp tip="{{tip}}" wx:if="{{isTip}}" bindtip="tipTap"></tip-cmp>
+</view>

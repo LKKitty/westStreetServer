@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/wishCollection/index",
+    "pages/reservationService/index",
+    "pages/activitySign/index",
+    "pages/personalCenter/index",
+    "pages/wishCollection/releasePage/index",
+    "pages/personalCenter/detail/index",
+    "pages/wishCollection/detailPage/index",
+    "pages/activitySign/detail/index",
+    "pages/headlineNews/detail/index",
+    "pages/headlineNews/index",
+    "pages/wishCollection/participatePage/index",
+    "pages/reservationService/detailPage/index",
+    "pages/wishCollection/wishGo/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF5055",
+    "navigationBarTitleText": "西区街道服务云平台",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "color": "#8B8B8B",
+    "selectedColor": "#FF2E43",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/homeIcon@dis.png",
+        "selectedIconPath": "./images/homeIcon.png"
+      },
+      {
+        "pagePath": "pages/personalCenter/index",
+        "text": "我的",
+        "iconPath": "./images/persionIcon@dis.png",
+        "selectedIconPath": "./images/persionIcon.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

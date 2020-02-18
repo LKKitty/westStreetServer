@@ -1,0 +1,7 @@
+<!--pages/headlineNews/detail/index.wxml-->
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="content">
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+
+  <!-- <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text> -->
+</view>

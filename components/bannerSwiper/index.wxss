@@ -1,0 +1,12 @@
+/* components/bannerSwiper/index.wxss */
+swiper{
+  width: 703rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  overflow: hidden;
+}
+swiper image{
+  width: 100%;
+  height: 100%;
+}

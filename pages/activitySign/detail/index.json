@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "banner-cmp":"/components/bannerSwiper/index",
+    "nav-cmp":"/components/nav/index",
+    "tip-cmp":"/components/tipMask/index"
+  },
+  "navigationBarTitleText":"活动详情页"
+
+}

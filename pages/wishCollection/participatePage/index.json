@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tip-cmp":"/components/tipMask/index"
+  },
+  "navigationBarTitleText": "参与心愿"
+}

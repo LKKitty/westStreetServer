@@ -1,0 +1,56 @@
+<!-- pages/wishCollection/detailPage/index.wxml -->
+<view class="container" wx:if="{{wishData}}">
+  <view class="header"></view>
+  <!-- content -->
+  <view class="content">
+    <!-- swiper -->
+    <banner-cmp imgUrls="{{imgUrls}}"></banner-cmp>
+    <view class="wish-content">
+      <!-- 心愿详情 -->
+    <view class="tab one">
+      <view class="left">
+        <text class="title">心愿详情</text>
+        <text class="text">本项目剩余数量：{{wishData.HaveCount}}</text>
+      </view>
+      <image src="{{upImgs[0]}}" />
+    </view>
+    <!-- 心愿简介 -->
+    <view class="tab two">
+      <text class="title">心愿简介</text>
+      <view class="center des {{expand1?'center_active ':''}}"  animation="{{ani1}}">
+        <text class="text center_text">{{wishData.Infos}}</text>
+      </view>
+      <!-- <view class="triangle" bind:tap="expand1">
+        <text>{{expand1?'收起':'展开'}}</text>
+        <image src="{{expand1?'./up_triangle.png':'./down_triangle.png'}}" />
+      </view> -->
+    </view>
+    <!-- 心愿详情 -->
+    <view class="tab three">
+      <text class="title">心愿详情</text>
+      <view class="center {{expand2?'center_active ':''}}" animation="{{ani2}}" >
+        <view class="three_center">
+        <image wx:for="{{upImgs}}" wx:key="index" src="{{item}}" />
+        <text class="text center_text">{{wishData.Infos ? wishData.Infos:''}}</text>
+      </view>
+      </view>
+      <view class="triangle" bind:tap="expand2">
+        <text>{{expand2?'收起':'展开'}}</text>
+        <image src="{{expand2?'./up_triangle.png':'./down_triangle.png'}}" />
+      </view>
+    </view>
+    <!-- 心愿去向 -->
+    <view class="tab four {{type===1?'':'four-bottom'}}">
+      <text class="title">心愿去向</text>
+      <view class="center wish-center" bind:tap="onwishGo" data-id="{{wishData.Id}}">
+        <text>心愿项目去向进展</text>
+        <image src="./right_triangle.png" />
+      </view>
+    </view>
+    <!-- 按钮 -->
+    <view class="submit" wx:if="{{type===1}}" bind:tap="submit" data-id="{{wishData.Id}}" style="opacity:{{wishData.IsGet ==  0 ? 1:0.8}}">
+      <text>{{wishData.IsGet ==  0 ? '参与心愿':'已参与'}}</text>
+    </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<!--pages/reservationService/index.wxml-->
+<view class="container">
+  <view class="header"></view>
+  <!-- content -->
+  <view class="content">
+    <!-- 日历 -->
+    <view class="tab date-box">
+      <calender-cmp id="calendar" binddaytap="dayTap"></calender-cmp>
+    </view>
+    <!-- 导航组件 -->
+    <nav-cmp bindnav="navTap"></nav-cmp>
+    <view class="item-content">
+      <list-cmp binditem="itemTap" wx:key="index" wx:for="{{lists}}" type="reservation" item="{{item}}"></list-cmp>
+      <!-- noData -->
+    <text class="noData" wx:if="{{lists.length === 0}}">{{noDatatext}}</text>
+    </view>
+  </view>
+</view>

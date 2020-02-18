@@ -1,0 +1,51 @@
+/* pages/headlineNews/index.wxss */
+.flexbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.content {
+  padding: 20rpx 37rpx;
+  overflow: auto;
+}
+.list {
+  padding: 44rpx 0;
+  border-bottom: 1rpx solid #f3f6f7;
+}
+.list:last-child{
+  border:0;
+}
+.left image {
+  width: 149rpx;
+  height: 114rpx;
+  border-radius: 10rpx;
+}
+.center {
+  flex: 1;
+  margin-left: 18rpx;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.center .title {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(252, 101, 102, 1);
+  text-align: left;
+}
+.center .des {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  /* font-weight: bold; */
+  color: #8B8B8B;
+  text-align: left;
+}
+.right {
+  margin-left: 26rpx;
+  align-self: flex-start;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #8B8B8B;
+}

@@ -1,0 +1,29 @@
+<!-- pages/activitySign/index.wxml -->
+<view class="container">
+  <!-- banner -->
+  <view class="header"></view>
+  <!-- content -->
+  <view class="content">
+    <!-- 选择框 -->
+    <view class="select-box">
+      <!-- <view class="select-current">
+        <text>党建</text>
+        <image src="./images/down_arrow.png" />
+      </view> -->
+      <!-- <view class="select-current">普通选择器</view> -->
+      <picker bindchange="bindPickerChange" value="{{arrayIndex}}" range="{{array}}">
+        <view class="picker select-current">
+          <text>{{array[arrayIndex]}} </text>
+          <image src="./images/down_arrow.png" />
+        </view>
+      </picker>
+    </view>
+    <!-- 内容 -->
+    <view class="lists">
+      <!-- item组件 -->
+      <list-cmp binditem="itemTap"  wx:for="{{lists}}" wx:key="index" type="activity" item="{{item}}"></list-cmp>
+    </view>
+    <!-- noData -->
+    <text class="noData" wx:if="{{lists.length === 0}}">{{noDatatext}}</text>
+  </view>
+</view>

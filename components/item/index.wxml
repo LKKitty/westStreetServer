@@ -1,0 +1,34 @@
+<!-- components/item/index.wxml -->
+<view class="item {{type==='wish' ? 'check-item ': ''}}"
+bindtap="itemTap" data-id="{{item.Id}}">
+  <image class="thum-img {{type==='wish' ? 'wish-thum-img' : ''}}" src="{{Img}}" />
+  <view class="right">
+    <view class="title">
+      <text>{{title}}</text>
+    </view>
+    <view class="dates">
+      <text wx:if="{{type!='reservation'}}" class="date">日期：{{Sdate}}{{Edate=== Sdate ? '':'-' + Edate}}</text>
+      <text class="date" wx:if="{{type==='reservation'}}">日期：{{subTime}}</text>
+      <text class="time" wx:if="{{type !='wish'}}">时间：{{STime}}-{{ETime}}</text>
+    </view>
+    <view class="bottom">
+      <view class="count">
+        <text>物品名称</text>
+      </view>
+      <!-- 
+        canel-color：取消预约
+        onsite:到场
+        outsite:未到场 -->
+      <view class="botton {{isExpire === 0?'canel' : 'outsite'}}" wx:if="{{type==='wish'? false:true}}" catchtap="canelTap" data-id="{{item.Id}}" data-title="{{title}}">
+        <text wx:if="{{type==='reservation'}}">{{isExpire === 0?'取消预约' : '已预约'}}</text>
+        <text wx:if="{{type==='activity'}}">{{isExpire === 0?'取消报名' : '已报名'}}</text>
+      </view>
+      <!-- 我的心愿显示 -->
+      <view class="botton" wx:if="{{type==='wish'? true:false}}"data-id="{{item.Id}}" data-title="{{title}}">
+        <text class="wishtext {{item.Status === 0?'' : 'wishChick'}}">{{item.Status === 0?'等待审核' : '审核通过'}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 横线 -->
+  <view class="hr" wx:if="{{type==='wish'}}"></view>
+</view>

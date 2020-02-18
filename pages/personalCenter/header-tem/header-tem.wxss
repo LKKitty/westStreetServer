@@ -1,0 +1,46 @@
+.header{
+  width: 100%;
+}
+.header .avatarBox {
+  position: absolute;
+  top: 50rpx;
+  left: 43rpx;
+  width: 90%;
+  height: 129rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header .avatarBox .avatar {
+  width: 129rpx;
+  height: 129rpx;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.header .avatarBox .text{
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  line-height: 40rpx;
+  margin-left: 30rpx;
+}
+.header .avatarBox button {
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  line-height: 40rpx;
+  margin-left: 30rpx;
+  text-align: left;
+  background: none;
+  border: none;
+}
+button:after{
+  border:none;
+}
+.header .avatarBox .arrow {
+  width: 16rpx;
+  height: 29rpx;
+}

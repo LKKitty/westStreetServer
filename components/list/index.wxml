@@ -1,0 +1,56 @@
+<!-- components/item/index.wxml -->
+<view class="item check-item" bind:tap="itemTap">
+  <image class="thum-img {{type=='wish'?'':'wish-thum-img'}}" src="{{Img}}" />
+  <view class="right">
+    <view class="title">
+      <text>{{title?title:''}}</text>
+    </view>
+    <view class="dates">
+      <text class="date">日期：{{date}}</text>
+      <block wx:if="{{isFrom===1}}">
+        <text class="time {{type!=='reservation'?'':'opacity'}}" >时间：{{STime}}-{{ETime}}</text>
+      </block>
+      <block wx:if="{{isFrom===0}}">
+        <text class="time {{type!=='wish'?'':'opacity'}}" >时间：{{STime}}-{{ETime}}</text>
+      </block>
+    </view>
+    <view class="bottom">
+      <view class="count" style="opacity:{{type==='activity'?1:0}}">
+        <text>报名人数：{{JoinCount? JoinCount:0}}/{{item.MaxPeople?item.MaxPeople:'不限'}}</text>
+      </view>
+      <!-- <view class="count" style="opacity:{{type==='wish'?1:0}}">
+        <text>报名人数：{{SignCount}}</text>
+      </view> -->
+      <!-- 从首页进入显示预约 -->
+      <!-- canel-color：取消预约
+        onsite:到场
+        outsite:未到场 -->
+      <block wx:if="{{type==='reservation'}}">
+        <view class="botton canel" wx:if="{{isFrom === 1}}" style="opacity:{{item.isGet === 0 ? 1:0.8}}">
+          <text>{{item.isGet === 0 ? '预约' :'已预约'}}</text>
+        </view>
+        <view class="botton {{reservIndex === 1 ? 'onsite' : 'canel'}}" wx:if="{{isFrom === 0}}">
+          <text catch:tap="operatTap"  data-type="{{reservStatus[reservIndex]}}">{{reservStatus[reservIndex]}}
+          </text>
+        </view>
+      </block>
+      <!-- 从首页、个人中心进入显示活动报名 -->
+      <block wx:if="{{type==='activity'}}">
+        <!-- 首页 -->
+        <view class="botton activity"  style="color:{{activityIndex===2?'#9c9c9c':''}}" wx:if="{{isFrom === 1}}">
+        <text>活动状态：{{activityStatus[activityIndex]}}</text>
+      </view>
+      <!-- 个人中心进入 -->
+        <view class="botton {{activityIndex===6?'outsite':'canel'}} {{activityIndex===5?'onsite':'canel'}}" wx:if="{{isFrom === 0}}" style="opacity:1"  data-type="{{activityStatus[activityIndex]}}" catch:tap="operatTap">
+          <text>{{activityStatus[activityIndex]}}</text>
+        </view>
+      </block>
+      <!-- 我的心愿显示 -->
+      <view class="botton" wx:if="{{type==='wish'? true:false}}" data-id="{{item.Id}}" data-title="{{title}}">
+        <text class="wishtext {{item.Status === 0?'' : 'wishChick'}}">{{item.Status === 0?'等待审核' : '审核通过'}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 横线 -->
+  <view class="hr"></view>
+</view>

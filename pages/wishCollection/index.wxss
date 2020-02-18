@@ -1,0 +1,111 @@
+/* pages/wishCollection/index.wxss */
+.container {
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0rpx 71rpx;
+  box-sizing: border-box;
+}
+.header text {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 40rpx;
+}
+.add {
+  width: 160rpx;
+  height: 163rpx;
+  margin-top: -70rpx;
+  z-index: 2;
+}
+.content {
+  position: relative;
+  width: 100%;
+  padding: 0 23rpx;
+  height: 850rpx;
+  box-sizing: border-box;
+  overflow: auto;
+  margin-top: -60rpx;
+}
+.noData{
+  top:100rpx;
+}
+.content .list {
+  margin-bottom:30rpx;
+  border-radius: 10rpx;
+  padding: 39rpx 44rpx;
+  background: #fff;
+  box-shadow: 0rpx 18rpx 24rpx 0rpx rgba(241, 241, 241, 0.44);
+}
+
+.content .list .list-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1rpx solid #f3f6f7;
+  padding-bottom: 30rpx;
+}
+.content .list .list-header image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.content .list .adum-img {
+  width: 617rpx;
+  height: 239rpx;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+}
+.content .list .list-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 38rpx 0;
+  border-bottom: 1rpx solid #f3f6f7;
+}
+.content .list .list-item text {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(60, 60, 60, 1);
+  line-height: 42rpx;
+}
+.content .list .list-item .text {
+  flex: 1;
+}
+.content .list .list-bottom {
+  border-bottom: 0;
+  padding-bottom: 20rpx;
+}
+.content .list .list-bottom .jichu {
+  align-self: flex-start;
+}
+.content .list .list-bottom .text {
+  color: #8b8b8b;
+}
+.content .list .list-bottom .list-button {
+  align-self: flex-end;
+  margin-bottom: -20rpx;
+  margin-left: 20rpx;
+  width: 119rpx;
+  height: 45rpx;
+  background: linear-gradient(
+    -42deg,#FF1D36,
+    rgba(255, 99, 99, .8)
+  );
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .list .list-bottom .list-button text {
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}

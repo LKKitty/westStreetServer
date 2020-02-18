@@ -1,0 +1,160 @@
+/* pages/wishCollection/releasePage/index.wxss */
+.container {
+  align-items: center;
+}
+.flex-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-box {
+  width: 100%;
+  height: 100%;
+  /* overflow: auto; */
+  margin-top: -280rpx;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.content {
+  width: 704rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 18rpx 24rpx 0rpx rgba(241, 241, 241, 0.44);
+  border-radius: 10rpx;
+  padding: 0 34rpx;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+.content .item {
+  padding-top: 36rpx;
+  border-bottom: 1px solid #f3f6f7;
+}
+.content .item .tip {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(48, 48, 48, 1);
+}
+.content .item .input {
+  height: 66rpx;
+  font-size: 28rpx;
+  color: rgba(156, 156, 156, 1);
+}
+.re-input {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 36rpx 0;
+  border-bottom: 1rpx solid rgba(243, 246, 247, 1);
+}
+picker{
+  position: relative;
+  height: 40rpx;
+  line-height: 50rpx;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+picker .picker {
+  position: absolute;
+  top:0;
+  left:0;
+  flex: 1;
+  width: 100%;
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #111111;
+}
+picker .picker .triangle{
+  position: absolute;
+  right: 0;
+  top:20rpx;
+  width: 16rpx;
+  height: 8rpx;
+}
+.placeholder {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+}
+.content .item .count-box{
+  justify-content: flex-start;
+}
+.content .item .count-box input{
+  flex: 1;
+}
+.content .item .count-box .arrow-box{
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.content .item .arrow-box image{
+  width: 15rpx;
+  height:8rpx;
+  margin-bottom: 6rpx;
+  border: 40rpx solid rgba(1, 1, 1, 0);
+}
+.content .item .arrow-box .up{
+  border-bottom: 0;
+}
+.content .item .arrow-box .down{
+  border-top: 0;
+}
+.content .item .up-box {
+  height: 190rpx;
+  width: 96%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20rpx 0;
+  padding: 15rpx;
+  overflow: hidden;
+}
+.content .item .up-box .up-img{
+  position: relative;
+  margin: 8rpx 8rpx;
+}
+.content .item .up-box .up-img .close{
+  position: absolute;
+  top:-25rpx;
+  right:-25rpx;
+  width: 28rpx;
+  height: 28rpx;
+  border: 20rpx solid rgba(1, 1, 1, 0);
+}
+.content .item .up-box .up-img image {
+  width: 190rpx;
+  height: 190rpx;
+  object-fit: cover;
+  border-radius: 10rpx;
+}
+.content .item .reason {
+  margin-top: 20rpx;
+  width: 600rpx;
+  height: 227rpx;
+}
+.submit {
+  margin-top: 133rpx;
+  margin-bottom: 110rpx;
+  margin-left: 50rpx;
+  width: 543rpx;
+  height: 91rpx;
+  background: linear-gradient(
+    -90deg,
+    rgba(253, 103, 104, 1) 0%,
+    rgba(240, 64, 68, 1) 100%
+  );
+  box-shadow: 0rpx 16rpx 21rpx 0rpx rgba(255, 42, 42, 0.26);
+  border-radius: 46rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit text {
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}

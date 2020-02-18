@@ -1,0 +1,16 @@
+<!-- components/tipMask/index.wxml -->
+<view class="tip-container" catchtouchmove="ture">
+  <view class="tip-content">
+    <view class="tipBg">
+      <image src="{{tip.imgUrl}}" />
+      <text class="tip-status" wx:if="{{tip.status !== 2}}">{{tip.status === 0 ? '注册成功' : '注册失败'}}</text>
+      <text class="tip-msg {{tip.status !== 2 ? '' : 'big-msg'}}">{{tip.msg}}</text>
+      <view class=" tip-bot tip-suc" bindtap="onTip" data-status="0">
+        <text>确认</text>
+      </view>
+      <view class=" tip-bot tip-fail" wx:if="{{tip.showCanel}}" bindtap="onTip" data-status="1">
+        <text>取消</text>
+      </view>
+    </view>
+  </view>
+</view>

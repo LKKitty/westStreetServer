@@ -1,0 +1,97 @@
+<!-- pages/reservationService/detailPage/index.wxml -->
+<!-- pages/activitySign/detail/index.wxml -->
+<view class="container">
+  <!-- banner -->
+  <view class="header"></view>
+  <!-- content -->
+  <view class="content">
+    <!-- swiper -->
+    <banner-cmp imgUrls="{{imgUrls}}"></banner-cmp>
+    <!-- tab-box -->
+    <nav-cmp bindnav="navTap" navNames="{{navNames}}" indexId="0"></nav-cmp>
+    <!-- tab-content -->
+    <view class="tab-content">
+      <view id="tab-item1" wx:if="{{indexId === 0}}" class="tab-item one">
+        <view class="item">
+          <text class="lable">活动时间：</text>
+          <text>{{data.SDate}}-{{data.EDate}}</text>
+        </view>
+        <view class="item noBorder">
+          <text class="lable">活动地址：</text>
+          <text>{{data.Address?data.Address:''}}</text>
+        </view>
+      </view>
+      <view id="tab-item2" wx:if="{{indexId === 1}}" class="tab-item two">
+        <!-- <view class="head">
+          <image src="./images/meet.png" />
+          <text>会议室功能</text>
+        </view> -->
+        <view class="text">
+          <text>{{data.Remark?data.Remark:''}}</text>
+        </view>
+      </view>
+      <view id="tab-item3" wx:if="{{indexId === 2}}" class="tab-item two">
+        <!-- <view class="head">
+          <image src="./images/notice.png" />
+          <text>须知事项</text>
+        </view> -->
+        <view class="item">
+          <text class="lable">服务对象：</text>
+          <text>{{data.ServicePeople?data.ServicePeople:''}}</text>
+        </view>
+        <view class="item">
+          <text class="lable">限用时长：</text>
+          <text>{{data.MaxHours?data.MaxHours:''}}小时</text>
+        </view>
+        <view class="item noBorder">
+          <text class="lable">补充事项：</text>
+          <text>{{data.Contents?data.Contents:''}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="submit" catchtap='clickPup' style="opacity:{{isGet===0?'':0.8}}">
+      <text>{{isGet===0?'我要预约':'已预约'}}</text>
+    </view>
+  </view>
+  <!-- 弹出层 -->
+  <view class="mask-box {{click?'show':'hide'}} {{option? 'openBG': 'closeBG'}}" catchtap='clickPup'>
+    <view class="mask-content">
+      <view class="date-box {{click?'show':'hide'}} {{option?'open':'close'}}" catchtap='boxTap'>
+        <view class="date-list">
+          <text class="date-title">时间</text>
+          <view class="date-items">
+            <view class="date-item date-item-active">
+              <text>{{day}} {{week}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="date-list">
+          <text class="date-title">场次</text>
+          <view class="date-items date-select-box">
+            <view class="date-item-time flex-box">
+              <text class="time-text">选择开始时间：</text>
+              <!-- <view class="date-item select-time date-item-active"> -->
+                <picker mode="time" value="{STime}}" start="09:01" end="21:01" bindchange="bindSTimeChange" class="date-item select-time date-item-active">
+                  <view class="date-item picker">{{STime}}</view>
+                </picker>
+              <!-- </view> -->
+            </view>
+            <view class="date-item-time flex-box">
+              <text class="time-text">选择结束时间：</text>
+              <!-- <view class="date-item select-time date-item-active"> -->
+                <picker mode="time" value="{{ETime}}" start="09:01" end="21:01" bindchange="bindETimeChange" class="date-item select-time date-item-active">
+                  <view class="date-item picker">{{ETime}}</view>
+                </picker>
+              <!-- </view> -->
+            </view>
+          </view>
+        </view>
+        <view class="submit" catchtap='submit'>
+          <text>开始预约</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- tip -->
+  <tip-cmp bindtip="onTip" tip="{{tips}}" wx:if="{{isTip}}"></tip-cmp>
+</view>
